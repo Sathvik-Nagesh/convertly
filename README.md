@@ -28,13 +28,13 @@ A modern, professional-grade image converter that runs entirely in your browser.
 ## 🚀 Quick Start
 
 ### Live Demo
-🌐 **[Try Convertly Live](https://your-github-username.github.io/convertly)** (Coming soon)
+🌐 **[Try Convertly Live](https://sathvik-nagesh.github.io/convertly)** - Your images, converted instantly!
 
 ### Local Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/convertly.git
+git clone https://github.com/Sathvik-Nagesh/convertly.git
 cd convertly
 
 # Install dependencies
