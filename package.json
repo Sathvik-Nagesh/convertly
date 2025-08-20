@@ -2,6 +2,7 @@
   "name": "convertly",
   "version": "0.1.0",
   "description": "A modern, client-side image converter that lets you convert images between different formats right in your browser - no server required!",
+  "homepage": "https://sathvik-nagesh.github.io/convertly",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -30,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -63,5 +66,8 @@
     "bmp"
   ],
   "author": "Convertly Team",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
