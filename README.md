@@ -9,6 +9,8 @@ A modern, professional-grade image converter that runs entirely in your browser.
 ### 🎯 **Core Functionality**
 - **Multiple Format Support**: Convert between JPG, PNG, WebP, GIF, and BMP
 - **Real-time Image Resizing**: Interactive slider with live preview (10%-200%)
+- **AI-Powered Upscaling**: Enhance image resolution using advanced neural networks
+- **Background Removal**: AI-powered background removal with transparency support
 - **EXIF Data Viewer & Remover**: View metadata and optionally remove it for privacy
 - **Smart Compression**: Automatic optimization for JPEG and WebP formats
 - **Drag & Drop Upload**: Intuitive file handling with visual feedback
@@ -16,7 +18,7 @@ A modern, professional-grade image converter that runs entirely in your browser.
 ### 🎨 **User Experience**
 - **Dark Minimal Theme**: Professional black interface with blue accents
 - **Real-time Preview**: See changes instantly with Canvas-based rendering
-- **Progress Indicators**: Animated progress bars during conversion
+- **Progress Indicators**: Animated progress bars during conversion and upscaling
 - **Responsive Design**: Works seamlessly on desktop and mobile
 - **Format Education**: Learn about each image format with detailed explanations
 
@@ -24,6 +26,20 @@ A modern, professional-grade image converter that runs entirely in your browser.
 - **100% Client-side**: No data ever leaves your browser
 - **EXIF Removal**: Protect privacy by removing metadata
 - **No Server Dependencies**: Everything runs locally
+
+### 🤖 **AI Upscaling Features**
+- **Smart AI Models**: ESRGAN Default, Medium, and Thick models for different image types
+- **Configurable Scaling**: 1.5x to 4x resolution enhancement
+- **Intelligent Fallbacks**: Automatic fallback to basic upscaling when AI fails
+- **WebGL Optimization**: Smart patch sizing and memory management
+- **Real-time Progress**: Track upscaling progress with detailed feedback
+
+### 🎭 **Background Removal Features**
+- **AI-Powered Segmentation**: Advanced algorithms for precise background removal
+- **Transparency Support**: Export as PNG with alpha channel
+- **Quality Optimization**: High-quality canvas rendering and export
+- **Smart Fallbacks**: Automatic quality improvements and error handling
+- **User Expectations**: Clear disclaimer about limitations and best use cases
 
 ## 🚀 Quick Start
 
@@ -57,6 +73,8 @@ npm run build
 | **EXIF.js** | Metadata Extraction | 2.3+ |
 | **FileSaver.js** | File Downloads | 2.0+ |
 | **browser-image-compression** | Smart Compression | 2.0+ |
+| **UpscalerJS** | AI Upscaling | 1.0+ |
+| **TensorFlow.js** | AI Model Runtime | 4.11+ |
 
 ## 📱 How to Use
 
@@ -76,7 +94,21 @@ npm run build
 - Choose to remove metadata for privacy
 - Understand what information your images contain
 
-### 4. **Convert & Download**
+### 4. **AI Upscaling (Optional)**
+- Select AI model (ESRGAN Default, Medium, or Thick)
+- Choose scaling factor (1.5x to 4x)
+- Watch real-time upscaling progress
+- Preview enhanced image quality
+- Automatic fallback to basic upscaling if AI fails
+
+### 5. **Background Removal (Optional)**
+- Upload image for background removal
+- AI processes image with transparency
+- Preview result with removed background
+- Download as high-quality PNG with alpha channel
+- Clear limitations and best practices shown
+
+### 6. **Convert & Download**
 - Select target format
 - Watch the animated progress bar
 - Download your optimized image
@@ -96,6 +128,8 @@ npm run build
 
 - ✅ **Privacy First**: No data uploads, everything local
 - ✅ **Professional Quality**: Advanced compression algorithms
+- ✅ **AI-Powered**: Neural network upscaling and background removal
+- ✅ **Smart Fallbacks**: Automatic fallbacks when AI processing fails
 - ✅ **Lightning Fast**: Real-time processing and preview
 - ✅ **User Friendly**: Intuitive interface with helpful guidance
 - ✅ **Mobile Ready**: Responsive design works everywhere
@@ -152,7 +186,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 - ✅ **Core Features**: Complete
 - ✅ **EXIF Management**: Complete
+- ✅ **AI Upscaling**: Complete with fallbacks
+- ✅ **Background Removal**: Complete with disclaimer
 - ✅ **Responsive Design**: Complete
+- ✅ **Smart Fallbacks**: Complete
 - 🚧 **Batch Processing**: Planned
 - 🚧 **Advanced Filters**: Planned
 - 🚧 **PWA Support**: Planned
