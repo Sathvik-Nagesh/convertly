@@ -14,6 +14,9 @@ A modern, professional-grade image converter that runs entirely in your browser.
 - **EXIF Data Viewer & Remover**: View metadata and optionally remove it for privacy
 - **Smart Compression**: Automatic optimization for JPEG and WebP formats
 - **Drag & Drop Upload**: Intuitive file handling with visual feedback
+- **Batch Processing**: Process multiple images simultaneously with drag & drop
+- **Color Palette Extraction**: Extract dominant colors from images with AI analysis
+- **ZIP Download**: Download all processed images as a single ZIP file
 
 ### 🎨 **User Experience**
 - **Dark Minimal Theme**: Professional black interface with blue accents
@@ -40,6 +43,23 @@ A modern, professional-grade image converter that runs entirely in your browser.
 - **Quality Optimization**: High-quality canvas rendering and export
 - **Smart Fallbacks**: Automatic quality improvements and error handling
 - **User Expectations**: Clear disclaimer about limitations and best use cases
+
+### 📦 **Batch Processing Features**
+- **Multi-Image Upload**: Drag & drop multiple images at once
+- **Bulk Conversion**: Convert all images to the same format simultaneously
+- **Batch Upscaling**: Apply AI upscaling to all images in the batch
+- **Progress Tracking**: Real-time progress for each image in the batch
+- **ZIP Export**: Download all processed images as a single ZIP file
+- **Individual Downloads**: Download each processed image separately
+- **Smart Error Handling**: Continue processing even if some images fail
+
+### 🎨 **Color Palette Extraction Features**
+- **AI Color Analysis**: Extract dominant colors using K-means clustering
+- **Multiple Extraction Methods**: Vibrant, muted, dark, light, and custom algorithms
+- **Color Information**: Get HEX, RGB, and HSL values for each color
+- **Export Options**: Download color palettes as CSS, SCSS, GPL, or ASE files
+- **Visual Color Swatches**: See colors in a beautiful grid layout
+- **Copy to Clipboard**: Easy copying of color codes for design work
 
 ## 🚀 Quick Start
 
@@ -73,8 +93,8 @@ npm run build
 | **EXIF.js** | Metadata Extraction | 2.3+ |
 | **FileSaver.js** | File Downloads | 2.0+ |
 | **browser-image-compression** | Smart Compression | 2.0+ |
-| **UpscalerJS** | AI Upscaling | 1.0+ |
-| **TensorFlow.js** | AI Model Runtime | 4.11+ |
+| **JSZip** | ZIP File Creation | 3.10+ |
+| **Framer Motion** | Animations | 10.0+ |
 
 ## 📱 How to Use
 
@@ -108,7 +128,22 @@ npm run build
 - Download as high-quality PNG with alpha channel
 - Clear limitations and best practices shown
 
-### 6. **Convert & Download**
+### 6. **Batch Processing (New!)**
+- Switch to the "Batch" tab
+- Drag & drop multiple images at once
+- Configure settings for all images (format, resize, upscale)
+- Watch real-time progress for each image
+- Download all images as a ZIP file or individually
+
+### 7. **Color Palette Extraction (New!)**
+- Switch to the "Color Palette" tab
+- Upload an image to extract colors from
+- Choose extraction method (K-means, vibrant, muted, etc.)
+- Adjust color count (3-16 colors)
+- View color swatches with HEX, RGB, and HSL values
+- Export color palette as CSS, SCSS, GPL, or ASE files
+
+### 8. **Convert & Download**
 - Select target format
 - Watch the animated progress bar
 - Download your optimized image
@@ -134,6 +169,20 @@ npm run build
 - ✅ **User Friendly**: Intuitive interface with helpful guidance
 - ✅ **Mobile Ready**: Responsive design works everywhere
 - ✅ **Open Source**: Free to use, modify, and contribute
+- ✅ **Batch Processing**: Handle multiple images efficiently
+- ✅ **Color Analysis**: Extract and export color palettes
+- ✅ **Modern UI**: Neo-Brutalism design with smooth animations
+
+## 🆕 Recent Updates
+
+### Version 2.0 - Major Feature Release
+- **🎨 Color Palette Extraction**: Extract dominant colors with AI analysis
+- **📦 Batch Processing**: Process multiple images simultaneously
+- **🎯 Improved Upscaling**: Fixed and enhanced AI upscaling functionality
+- **🎨 UI/UX Overhaul**: Complete redesign with Neo-Brutalism aesthetic
+- **📱 Mobile Optimization**: Better responsive design and touch interactions
+- **🐛 Bug Fixes**: Resolved font visibility and layout issues
+- **⚡ Performance**: Optimized processing and reduced bundle size
 
 ## 🧪 Advanced Features
 
@@ -190,9 +239,12 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - ✅ **Background Removal**: Complete with disclaimer
 - ✅ **Responsive Design**: Complete
 - ✅ **Smart Fallbacks**: Complete
-- 🚧 **Batch Processing**: Planned
+- ✅ **Batch Processing**: Complete with ZIP export
+- ✅ **Color Palette Extraction**: Complete with multiple algorithms
+- ✅ **UI/UX Improvements**: Complete with Neo-Brutalism design
 - 🚧 **Advanced Filters**: Planned
 - 🚧 **PWA Support**: Planned
+- 🚧 **More AI Models**: Planned
 
 ---
 
