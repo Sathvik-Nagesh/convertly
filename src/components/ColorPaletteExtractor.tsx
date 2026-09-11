@@ -143,35 +143,46 @@ const ColorPaletteExtractor: React.FC<ColorPaletteExtractorProps> = ({
       const clusters: Array<Array<{ r: number; g: number; b: number }>> = Array(k).fill(null).map(() => []);
       
       // Assign pixels to closest centroid
-      pixels.forEach(pixel => {
-        let minDistance = Infinity;
+      const numPixels = pixels.length;
+      for (let i = 0; i < numPixels; i++) {
+        const pixel = pixels[i];
+        let minDistanceSq = Infinity;
         let closestCentroid = 0;
         
-        centroids.forEach((centroid, index) => {
-          const distance = Math.sqrt(
-            Math.pow(pixel.r - centroid.r, 2) +
-            Math.pow(pixel.g - centroid.g, 2) +
-            Math.pow(pixel.b - centroid.b, 2)
-          );
+        for (let j = 0; j < k; j++) {
+          const centroid = centroids[j];
+          const dr = pixel.r - centroid.r;
+          const dg = pixel.g - centroid.g;
+          const db = pixel.b - centroid.b;
           
-          if (distance < minDistance) {
-            minDistance = distance;
-            closestCentroid = index;
+          // Avoid Math.sqrt and Math.pow for performance
+          const distanceSq = dr * dr + dg * dg + db * db;
+
+          if (distanceSq < minDistanceSq) {
+            minDistanceSq = distanceSq;
+            closestCentroid = j;
           }
-        });
+        }
         
         clusters[closestCentroid].push(pixel);
-      });
+      }
       
       // Update centroids
-      centroids.forEach((centroid, index) => {
-        const cluster = clusters[index];
-        if (cluster.length > 0) {
-          centroid.r = cluster.reduce((sum, pixel) => sum + pixel.r, 0) / cluster.length;
-          centroid.g = cluster.reduce((sum, pixel) => sum + pixel.g, 0) / cluster.length;
-          centroid.b = cluster.reduce((sum, pixel) => sum + pixel.b, 0) / cluster.length;
+      for (let j = 0; j < k; j++) {
+        const cluster = clusters[j];
+        const len = cluster.length;
+        if (len > 0) {
+          let sumR = 0, sumG = 0, sumB = 0;
+          for (let i = 0; i < len; i++) {
+            sumR += cluster[i].r;
+            sumG += cluster[i].g;
+            sumB += cluster[i].b;
+          }
+          centroids[j].r = sumR / len;
+          centroids[j].g = sumG / len;
+          centroids[j].b = sumB / len;
         }
-      });
+      }
     }
     
     // Convert to final format with counts
